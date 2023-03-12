@@ -26,7 +26,7 @@ function Add2() {
         k = estimated_cost,
         f = remark;
 
-        history('/project');
+        history('/project_bidding');
 
         Promaster.push({id:uniqeId,project_title:a,portal:b,
             project_url:c,estimated_time:d,estimated_cost:k,remark:f});

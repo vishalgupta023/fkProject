@@ -16,7 +16,7 @@ function Add() {
         let uniqeId = ids.slice(0,8);
         let a = company,
         b = role;
-        history('/');
+        history('/portal_master');
 
         Employee.push({id:uniqeId,company:a,role:b});
 
@@ -24,7 +24,7 @@ function Add() {
 
   return (
     <div>
-        <Form className="d-grid gap-2" style={{margin:"15em"}}>
+        <Form className="d-grid gap-2" style={{marginTop:"7em",marginLeft:"50px"}}>
             <Form.Group>
             <input class="form-control" type="text" placeholder='Portal Name'
               required onChange={(e)=>setName(e.target.value)}/><br/>
@@ -32,7 +32,7 @@ function Add() {
               required onChange={(e)=>setRole(e.target.value)}/>
             
             </Form.Group>
-            <Button onClick={(e)=>handleSubmit(e)} type="submit">Submit</Button>
+            <Button style={{maxWidth:"150px"}} onClick={(e)=>handleSubmit(e)} type="submit">Submit</Button>
 
         </Form>
     </div>

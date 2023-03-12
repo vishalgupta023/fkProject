@@ -15,6 +15,16 @@ import HomeBidding from './Admin/projectbidding/HomeBidding'
 import PersonalInfo from './Employee/EmployeeComponent/PersonalInfo'
 import Education from './Employee/EmployeeComponent/Education/Education'
 import WorkExp from './Employee/EmployeeComponent/WorkExp/WorkExp';
+import Add2 from "./Admin/projectbidding/Add";
+import Add from "./Admin/portalmaster/Add"
+import Edit from "./Admin/portalmaster/Edit"
+import Dependents from './Employee/EmployeeComponent/Depenents';
+import LeaveApp from './Employee/EmployeeComponent/LeaveApp/LeaveApp';
+import Country from './HumanResources/HR-Components/Country/Country';
+import Salary from "./HumanResources/HR-Components/salary/ProductList"
+import DepartmentHr from './HumanResources/HR-Components/Department/Department';
+import PositionHr from './HumanResources/HR-Components/Position/Position'
+import State from './HumanResources/HR-Components/State/State';
 
 export default function App() {
   return (
@@ -29,17 +39,30 @@ export default function App() {
         <Route path='/department' element={<Department/>} />
         <Route path='/project_bidding' element={<HomeBidding/>} />
         <Route path='/portal_master' element={<Home/>} />
+        <Route path='/add2' element={<Add2/>} />
+        <Route path='/add' element={<Add/>} />
+        <Route path='/edit' element={<Edit/>} />
     {/* ADMIN PAFGE ROUTES */}
 
     {/* EMPLOYEE PAGE ROUTING */}
         <Route path='/employee/personal_info' element={<PersonalInfo/>} />
         <Route path='/employee/education' element={<Education/>} />
         <Route path='/employee/work_experience' element={<WorkExp/>} />
+        <Route path='/employee/dependents' element={<Dependents/>} />
+        <Route path='/employee/leave_application' element={<LeaveApp/>} />
     {/* EMPLOYEE PAGE ROUTING */}
         <Route path='/' element={<SideNavbar heading='Admin'/>}/>
         <Route path='/human-resources' element={<HumanResources heading='HR'/>}/>
         <Route path='/employee' element={<Employee heading='Employee'/>}/>
         <Route path='/human-resources/city' element={<City/>} />
+        <Route path='/human-resources/country' element={<Country/>} />
+        <Route path='/human-resources/salary' element={<Salary/>} />
+        <Route path='/human-resources/department' element={<DepartmentHr/>} />
+        <Route path='/human-resources/position' element={<PositionHr/>} />
+        <Route path='/human-resources/state' element={<State/>} />
+        <Route path='/human-resources/application' element={<LeaveApp/>} />
+        <Route path='/human-resources/role' element={<Role/>} />
+        <Route path='/human-resources/user' element={<PersonalInfo/>} />
         </Routes>
         </BrowserRouter>
     </div>

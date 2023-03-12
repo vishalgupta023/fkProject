@@ -25,7 +25,7 @@ function Home1(id) {
       return e.id
     }).indexOf(id);
     Promaster.splice(index,1)
-    history('/project')
+    history('/project_bidding')
 
   }
   return (
@@ -34,7 +34,7 @@ function Home1(id) {
       <nav className='navbar shadow-sm'>
           <div className="container-fluid mb-5">
               <h2>Bidding Details</h2>
-              <Link to={"/add2"}>
+              <Link to="/add2">
                 <button type="button" className="btn btn-primary">+</button>
               </Link>
           </div>

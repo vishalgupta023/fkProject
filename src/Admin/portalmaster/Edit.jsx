@@ -18,7 +18,7 @@ function Edit() {
             let a = Employee[index];
             a.company = company;
             a.role = role;
-            history('/');
+            history('/portal_master');
             
     }
 
@@ -29,7 +29,7 @@ function Edit() {
     },[])
   return (
     <div>
-        <Form className="d-grid gap-2" style={{margin:"15em"}}>
+        <Form className="d-grid gap-2" style={{marginTop:"7em",marginLeft:"50px"}}>
             <Form.Group>
             <input class="form-control" type="text" placeholder='Portal Name'
               value={company} required onChange={(e)=>setName(e.target.value)}/><br/>
@@ -37,7 +37,7 @@ function Edit() {
               value={role} required onChange={(e)=>setRole(e.target.value)}/>
             
             </Form.Group>
-            <Button onClick={(e)=>handleUpdate(e)} type="submit">update</Button>
+            <Button style={{width:"150px"}} onClick={(e)=>handleUpdate(e)} type="submit">update</Button>
 
         </Form>
     </div>

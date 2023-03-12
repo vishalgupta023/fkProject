@@ -15,13 +15,16 @@ function Home(id) {
     localStorage.setItem('role',role);
     localStorage.setItem('id',id);
   }
-  const handleDelete = () =>{
-    var index = Employee.map(function(e){
-      return e.id
-    }).indexOf(id);
-    Employee.splice(index,1)
-    history('/')
+  const handleDelete = (e) =>{
+    Employee.filter((item)=>{
+      console.log(item.id)
+      console.log(e)
 
+      // return item.id
+    })
+    console.log(Employee)
+    // Employee.splice(id,1)
+    history('/portal_master')
   }
   return (
      <>
@@ -29,7 +32,7 @@ function Home(id) {
       <nav className='navbar shadow-sm'>
           <div className="container-fluid mb-5">
               <h2>Portal Details</h2>
-              <Link to={"/add"}>
+              <Link to="/add">
                 <button type="button" className="btn btn-primary">+</button>
               </Link>
           </div>
@@ -57,7 +60,7 @@ function Home(id) {
                           <FaEdit onClick={()=> handleEdit(item.id,item.company,item.role)}/>
                         </Link>
                         &nbsp;
-                        <BsFillTrashFill onClick={()=> handleDelete(item.id)} alert='are you sure'/>
+                        <BsFillTrashFill onClick={(e)=> handleDelete(item.id)} alert='are you sure'/>
                       </td>
                     </tr>
                   )

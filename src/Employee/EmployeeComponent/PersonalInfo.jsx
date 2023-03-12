@@ -5,8 +5,8 @@ export default function Employee() {
   let [inputdata, setInputdata]=useState({fname:"", mname:"", lname:"", gender:"", contact:"", date:"", hobbies:"", address: ""})
   let [index, setIndex]=useState()
   let [bolin, setBolin]=useState(false)
-  let [showEdit, setShowEdit] = useState(false);  
-  let [editIndex, setEditIndex] = useState(null);
+  // let [showEdit, setShowEdit] = useState(false);  
+  // let [editIndex, setEditIndex] = useState(null);
 
   function data(e){
     setInputdata({...inputdata,[e.target.name]:e.target.value})
@@ -28,13 +28,18 @@ function deletedata(i){
    total.splice(i,1)
    setArray(total)
   }
+function handleUpdate(i){
+  setIndex(i)
+  setBolin(true)
+  setInputdata(array[i])
+}  
 
 // updating data
-//function updatedata(i){
-  //let {fname,mname,lname,gender,contact,date,hobbies,address}=array[i]
-  //setInputdata({fname,mname,lname,gender,contact,date,hobbies,address})
-  
-//}
+function updatedata(){
+  array[index]=inputdata
+  console.log(array[index])
+  setInputdata({fname:"", mname:"", lname:"", gender:"", contact:"", date:"", hobbies:"", address: ""})
+}
 
 
   return (
@@ -42,7 +47,7 @@ function deletedata(i){
       <>
 <h4 className='text-left p-3'><i>Employee Personal Details</i></h4>     
 <div className='container-fluid p-3'>
-<button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+NEW</button>
+<button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" onClick={()=>setBolin(false)}>+NEW</button>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -78,7 +83,7 @@ function deletedata(i){
       </div>
       <div class="modal-footer shadow-lg bg-dark">
         <button type="reset" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
-        <button type="submit" onClick={addinputdata}  class="btn btn-outline-light">Submit</button>
+        <button type="submit" onClick={bolin?updatedata:addinputdata} class="btn btn-outline-light">Submit</button>
       </div>
     </div>
   </div>
@@ -114,7 +119,7 @@ function deletedata(i){
             <td>{item.date}</td>
             <td>{item.hobbies}</td>
             <td>{item.address}</td>
-            <td><button class="btn btn-outline-dark">Update</button></td>
+            <td><button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" onClick={()=>handleUpdate(i)}>Update</button></td>
             <td><button onClick={() => deletedata(i)} class="btn btn-outline-dark">Delete</button></td>
           </tr>
         )

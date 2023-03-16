@@ -1,9 +1,15 @@
-.eparent {
-    /* border: 3px solid #f6f6f6; */
-    /* padding: 1vmax; */
+
+
+.component{
     display: flex;
-    flex-direction: row;
-    /* flex-basis: 2vmax; */
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-around;
 }
 
 /* .ebaby-left {
@@ -22,32 +28,25 @@
     /* border: 1rem solid rgb(63, 159, 94); */
 }
 
-.ebaby-right div {
+/* .ebaby-right div {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .ebaby-right div h2 {
     font-size: 2rem;
 }
 
 .ebaby-right div button {
-    width: 14vmax;
+    width: 4vmax;
     height: 3vmax;
     font-size: 1rem;
     margin-right: 1.5rem;
+    margin-left: 35rem;
     margin-top: 1.5rem;
-    /* margin-right: 1.5rem;
-    margin-top: 2rem; */
-    /* padding: unset; */
     color: white;
-    background-color: #3b4d7c;
+    background-color: black;
     border-radius: 0.5rem;
-}
-
-.eadd-button button {
-    width: 20rem;
-    height: 3rem;
 }
 
 .form-detail {
@@ -79,7 +78,7 @@ textarea {
     resize: vertical;
 }
 
-table {
+/* table {
     border-collapse: collapse;
     width: 100%;
     border: 1px solid rgba(175, 172, 172, 0.981);
@@ -91,7 +90,7 @@ th,
 td {
     text-align: left;
     padding: 8px;
-    /* color: black */
+    
 }
 
 th {
@@ -112,7 +111,43 @@ tr {
 td {
     color: black;
     font-size: 1vmax;
+} */
+
+
+
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:10px;
 }
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+
+th {
+    border-top: none;
+    color: gray;
+    background-color: rgb(239, 244, 244);
+    text-align: center;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+
+.back-button{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background-color: grey !important;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 4rem;
+    height: 2.5rem;
+}
+
 
 
 label {
@@ -162,4 +197,8 @@ label {
     .ebaby-right div h2 {
         font-size: 1.8rem;
     }
+}
+.text{
+    color: #000000;
+    font-family: "Raleway";
 }

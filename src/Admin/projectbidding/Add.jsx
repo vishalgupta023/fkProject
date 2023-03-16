@@ -56,7 +56,7 @@ function Add2() {
               required onChange={(e)=>setRemark(e.target.value)}/><br/>
             
             </Form.Group>
-            <Button onClick={(e)=>handleSubmit(e)} type="submit">Submit</Button>
+            <Button  variant="btn btn-dark" className="btn" onClick={(e)=>handleSubmit(e)} type="submit">Submit</Button>
 
         </Form>
     </div>

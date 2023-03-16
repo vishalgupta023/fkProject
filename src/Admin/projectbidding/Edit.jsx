@@ -62,7 +62,7 @@ function Edit2() {
               value={remark} required onChange={(e)=>setRemark(e.target.value)}/><br/>
             
             </Form.Group>
-            <Button onClick={(e)=>handleUpdate(e)} type="submit">update</Button>
+            <Button variant="btn btn-dark" className="btn" onClick={(e)=>handleUpdate(e)} type="submit">update</Button>
 
         </Form>
     </div>

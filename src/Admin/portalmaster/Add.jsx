@@ -32,7 +32,7 @@ function Add() {
               required onChange={(e)=>setRole(e.target.value)}/>
             
             </Form.Group>
-            <Button style={{maxWidth:"150px"}} onClick={(e)=>handleSubmit(e)} type="submit">Submit</Button>
+            <Button style={{maxWidth:"150px"}} variant="btn btn-dark" className="btn" onClick={(e)=>handleSubmit(e)} type="submit">Submit</Button>
 
         </Form>
     </div>

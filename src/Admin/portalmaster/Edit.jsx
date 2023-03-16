@@ -37,7 +37,7 @@ function Edit() {
               value={role} required onChange={(e)=>setRole(e.target.value)}/>
             
             </Form.Group>
-            <Button style={{width:"150px"}} onClick={(e)=>handleUpdate(e)} type="submit">update</Button>
+            <Button style={{width:"150px"}} variant="btn btn-dark" className="btn" onClick={(e)=>handleUpdate(e)} type="submit">update</Button>
 
         </Form>
     </div>

@@ -36,8 +36,8 @@ export default function SideNavbar() {
         <div className="nav-upper">
             <div className="nav-heading">
                 <div className="nav-brand">
-                    <img src='icons/admin.png' alt='nav-brand'></img>
-                    <h3>Admin</h3>
+                    <i class="fa fa-user-circle me-3"></i>
+                    <h3 className='h3'>Admin</h3>
                 </div>
                 <button className={isExpanded? 'hamburger hamburger-in' : 'hamburger hamburger-out'}
                 onClick={() => setExpanded(!isExpanded)}>

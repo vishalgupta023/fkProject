@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Dependents() {
+  const navigate = useNavigate()
   let [array,setArray]=useState([])
 //   console.log(array)
   let [inputdata, setInputdata]=useState({fullname:"", rel:"", date:"", occ:""})
@@ -50,10 +52,10 @@ function updatedata(){
   return (
     
 <>
-<h4 className='text-left p-3'><i>Dependents</i></h4>
+<h4 className='text-left p-3'>Dependents</h4>
       
 <div className='container-fluid p-3'>
-<button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+NEW</button>
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+NEW</button>
    
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -76,9 +78,9 @@ function updatedata(){
           </div>
         </form>
       </div>
-      <div class="modal-footer shadow-lg bg-dark">
-        <button type="reset" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
-        <button type="submit" onClick={bool?updatedata:addinputdata} class="btn btn-outline-light">Submit</button>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        <button type="submit" onClick={bool?updatedata:addinputdata} class="btn btn-dark">Submit</button>
       </div>
     </div>
   </div>
@@ -106,8 +108,8 @@ function updatedata(){
             <td>{item.rel}</td>
             <td>{item.date}</td>
             <td>{item.occ}</td>
-            <td><button class="btn btn-outline-dark"data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" onClick={()=>handleUpdate(i)}>Update</button></td>
-            <td><button onClick={() => deletedata(i)} class="btn btn-outline-dark">Delete</button></td>
+            <td><button class="btn btn-dark"data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" onClick={()=>handleUpdate(i)}>Update</button></td>
+            <td><button onClick={() => deletedata(i)} class="btn btn-dark">Delete</button></td>
           </tr>
         )
        }
@@ -117,6 +119,7 @@ function updatedata(){
   </thead>
   </table>
 </div>
+<button onClick={() => navigate(-1)} className="back-button">Back</button> 
 </div>
 
     </>

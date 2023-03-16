@@ -3,16 +3,12 @@ import "./Navbar.css";
 
 function Navbar(props) {
 	return (
-		<nav className="nav">
-            <img src="./icons/logo.png"></img>
+		<nav className="nav p-3">
+            <img src="./icons/1.png"></img>
             <div className="navbar">
             <ul>
-                <li>
-                <button class="btn default">Log in</button>
-                </li>
-                <li>
-                <button class="btn default">Log Out</button>
-                </li>
+            <i class="fa fa-user-circle-o m-0"></i>
+            <a>User user</a>
             </ul>
             </div>
         </nav>

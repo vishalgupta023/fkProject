@@ -1,10 +1,4 @@
-.wparent {
-    /* border: 3px solid #f6f6f6; */
-    /* padding: 1vmax; */
-    display: flex;
-    flex-direction: row;
-    /* flex-basis: 2vmax; */
-}
+
 
 /* .ebaby-left {
     width: 15%;
@@ -22,26 +16,24 @@
     /* border: 1rem solid rgb(63, 159, 94); */
 }
 
-.wbaby-right div {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .wbaby-right div h2 {
     font-size: 2rem;
 }
 
 .wbaby-right div button {
-    width: 14vmax;
+    width: 4vmax;
     height: 3vmax;
     font-size: 1rem;
     margin-right: 1.5rem;
+    margin-left: 30rem;
     margin-top: 1.5rem;
     /* margin-right: 1.5rem;
     margin-top: 2rem; */
     /* padding: unset; */
     color: white;
-    background-color: #3b4d7c;
+    background-color: black;
     border-radius: 0.5rem;
 }
 
@@ -82,4 +74,8 @@
     .wbaby-right div h2 {
         font-size: 1.8rem;
     }
+}
+.text{
+    color: #000000;
+    font-family: "Raleway";
 }

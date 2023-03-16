@@ -62,11 +62,15 @@ export default function LeaveTable() {
     };
 
     return (
-        <div>
+        <div className='component'>
             {!showNewComponent && (
-                <div className='ladd-button'>
-                    <button onClick={() => setShowNewComponent(true)}>Add Details</button>
+                <div className='heading'>
+                    <h2 className="text">Leave Application</h2>
+                    <div className='ladd-button'>
+                        <button className="text"  onClick={() => setShowNewComponent(true)}>+ Add</button>
+                    </div>
                 </div>
+                
             )}
             {!showNewComponent && (
                 <table>

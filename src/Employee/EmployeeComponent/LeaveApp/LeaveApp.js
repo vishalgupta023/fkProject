@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import './LeaveApp.css'
 import LeaveTable from './LeaveTable'
+import { useNavigate } from 'react-router-dom';
 import data from './LeaveData.json'
 
 
 export default function LeaveApp() {
     const [showNewComponent, setShowNewComponent] = useState(false);
-
+    const navigate = useNavigate()
 
     const handleClick = () => {
         setShowNewComponent(true);
@@ -20,7 +21,7 @@ export default function LeaveApp() {
                 {!showNewComponent && (<>
                     {/* <div> */}
                     <div>
-                        <h2>Leave Application</h2>
+                        {/* <h2 className="text">Leave Application</h2> */}
                         {/* <button variant="primary" onClick={handleClick}><RiAddFill style={{ paddingRight: "0.3rem" }} />
                             Add
                         </button> */}
@@ -30,6 +31,7 @@ export default function LeaveApp() {
                 </>
                 )}
             </div>
+            <button onClick={() => navigate(-1)} className="back-button">Back</button> 
         </div>
     )
 }

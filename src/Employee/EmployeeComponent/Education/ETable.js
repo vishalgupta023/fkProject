@@ -65,11 +65,18 @@ export default function ETable() {
     };
 
     return (
-        <div>
+        <div className='component'>
             {!showNewComponent && (
-                <div className='eadd-button'>
-                    <button onClick={() => setShowNewComponent(true)}>Add Details</button>
+                <div className='heading'>
+                    <div>
+                    <h2 className="text">Employee Education Details
+                    </h2>
+                    </div>
+                    <div className='eadd-button'>
+                        <button onClick={() => setShowNewComponent(true)}>+ Add</button>
+                    </div>
                 </div>
+                
             )}
             {!showNewComponent && (
                 <table>
@@ -105,7 +112,7 @@ export default function ETable() {
             {showNewComponent && (
                 <div>
                     <div className='form-header'>
-                        <h2>{editIndex === null ? 'Add Education Details' : 'Edit Education Details'}</h2>
+                        <h2 className="text">{editIndex === null ? 'Add Education Details' : 'Edit Education Details'}</h2>
                     </div>
                     <div className='form-detail'>
                         <form onSubmit={handleSubmit}>
@@ -133,7 +140,6 @@ export default function ETable() {
                     </div>
                 </div>
             )}
-
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Table, Button, Modal, Form } from "react-bootstrap";
+import { useNavigate} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./style.css";
@@ -21,6 +22,7 @@ const Position = () => {
   const [position, setPosition] = useState("");
   const [editIndex, setEditIndex] = useState(null);
 
+  let navigate = useNavigate();
 
   const handleAdd = () => {
     setCompany("");
@@ -56,9 +58,9 @@ const Position = () => {
 
   return (
     <div className="table-container">
-      <div className="header">
-        <h3>Position Details</h3>
-        <Button className="add-button" onClick={handleAdd}>
+      <div className="header p-3">
+        <h3 className="text">Position Details</h3>
+        <Button className="add-button btn-dark" onClick={handleAdd}>
         <i className="bi bi-plus-lg"></i>Add 
         </Button>
       </div>
@@ -85,9 +87,11 @@ const Position = () => {
         </tbody>
       </Table>
 
+      <Button onClick={() => navigate(-1)} className="back-button">Back</Button> 
+
       <Modal show={showAdd} onHide={() => setShowAdd(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Add New Row</Modal.Title>
+          <Modal.Title className="text">Add New Row</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -111,10 +115,10 @@ const Position = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowAdd(false)}>
+          <Button variant="btn btn-dark" className="btn" onClick={() => setShowAdd(false)}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleAddSave}>
+          <Button variant="btn btn-dark" className="btn" onClick={handleAddSave}>
             Save Changes
           </Button>
         </Modal.Footer>
@@ -122,7 +126,7 @@ const Position = () => {
 
       <Modal show={showEdit} onHide={() => setShowEdit(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Edit Row</Modal.Title>
+          <Modal.Title  className="text">Edit Row</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -146,14 +150,16 @@ const Position = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowEdit(false)}>
+          <Button variant="btn btn-dark" className="btn" onClick={() => setShowEdit(false)}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleEditSave}>
+          <Button variant="btn btn-dark" className="btn" onClick={handleEditSave}>
             Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
+
+      
     </div>
   )
 }

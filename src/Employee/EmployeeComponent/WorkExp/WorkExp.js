@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom';
 
 import './WorkExp.css'
 import WTable from './WTable'
@@ -12,6 +12,7 @@ export default function WorkExp() {
     const [fromDate, setfromDate] = useState('');
     const [toDate, setToDate] = useState('');
     const [designation, setDesignation] = useState('');
+    const navigate = useNavigate()
 
 
     const handleSubmit = (e) => {
@@ -32,7 +33,7 @@ export default function WorkExp() {
                 {!showNewComponent && (<>
                     {/* <div> */}
                     <div>
-                        <h2>Employee Work Experience Details</h2>
+                        {/* <h2 className="text" >Employee Work Experience Details</h2> */}
                         {/* <button variant="primary" onClick={handleClick}><RiAddFill style={{ paddingRight: "0.3rem" }} />
                             Add
                         </button> */}
@@ -44,6 +45,8 @@ export default function WorkExp() {
                 </>
                 )}
             </div>
+
+            <button onClick={() => navigate(-1)} className="back-button">Back</button> 
         </div>
     )
 }

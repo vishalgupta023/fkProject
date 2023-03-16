@@ -4,6 +4,7 @@ import Promaster from './Promaster';
 import {FaEdit} from "react-icons/fa";
 import { BsFillTrashFill } from "react-icons/bs";
 import {Link,useNavigate} from 'react-router-dom';
+
 //import '../Home.css';
 
 //import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,12 +31,12 @@ function Home1(id) {
   }
   return (
      <>
-      <div style={{margin:"5em"}}>
+      <div>
       <nav className='navbar shadow-sm'>
           <div className="container-fluid mb-5">
-              <h2>Bidding Details</h2>
+              <h2 className="text">Bidding Details</h2>
               <Link to="/add2">
-                <button type="button" className="btn btn-primary">+</button>
+                <button type="button" className="btn btn-dark">+Add</button>
               </Link>
           </div>
       </nav>
@@ -82,6 +83,8 @@ function Home1(id) {
               }
             </tbody>
         </Table>
+
+        <Button onClick={() => history(-1)} className="back-button">Back</Button> 
        
       </div>
     </>

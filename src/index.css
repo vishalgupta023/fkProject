@@ -1,7 +1,7 @@
 :root {
-    --primary: #55717e;
-    --dark: #0D1B81;
-    --gray: #756388;
+    --primary: black;
+    --dark: #E65137;
+    --gray: #E65137;
     --light: white;
 }
 
@@ -10,8 +10,11 @@
         padding: 40px;
     } */
 
+
+
+
 .side-nav-container {
-    background-color: #5AD6A0;
+    background-color: #E65137;
 	width: 300px;
 	height: 100vh;
 	position: relative;
@@ -22,7 +25,7 @@
 }
 
 .side-nav-container-NX {
-    width: 150px;
+    width: 210px;
 }
 .nav-upper,
 .nav-heading, nav-menu, menu-item {
@@ -38,6 +41,7 @@
 .nav-brand{
     margin-top: 65px;
     display: flex;
+    justify-content: center;
 }
 
 .nav-brand img {
@@ -54,7 +58,7 @@
     border: none;
     cursor: pointer;
     margin: 65px -35px;
-    background-color: var(--primary);
+    background-color: black;
     border: 2px solid var(--light);
     padding: 15px;
     border-radius: 90px;
@@ -116,11 +120,12 @@
     border-radius: 10px;
     position: relative;
     padding: 4px;
-    font-size: 13px;
+    font-size: 15px;
+    font-family: "Raleway";
 }
 
 .menu-item:hover {
-    background-color: #999EC8;
+    color: black;
 }
 
 .menu-item img {
@@ -135,3 +140,16 @@
 }
 
 
+.h3{
+    font-family: "Raleway";
+}
+.fa
+{
+    font-size:30px;
+    color:"red";
+}
+.fas
+{
+    font-size:30px;
+    color:"red";
+}

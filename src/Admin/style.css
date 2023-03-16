@@ -9,6 +9,8 @@ tr:nth-child(even){
 
 th{
     padding: 10px 8px 10px 8px !important;
+    font-family: "Raleway";
+    text-align: center;
 }
 
 td{
@@ -23,6 +25,15 @@ td{
 .header{
     display: flex;
     margin-bottom: 20px;
+    
+}
+
+.back-button{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background-color: grey;
+    border: 1px solid black;
 }
 
 .add-button{
@@ -30,10 +41,13 @@ td{
     right: 40px;
     padding: 5px;
     font-size: 17px;
+    font-family: "Raleway";
+    
 }
 
 .add-button i{
     padding-right: 5px;
+
 }
 
 .actions-column{
@@ -42,4 +56,16 @@ td{
 }
 .bi::before{
     display: inline !important;
+}
+.text{
+    color: #000000;
+    font-family: "Raleway";
+}
+
+.h3{
+    margin:"10px 60px";
+    font-family: "Raleway";
+}
+.btn{
+    font-family: "Raleway";
 }

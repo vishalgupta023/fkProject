@@ -63,11 +63,15 @@ export default function WTable() {
     }
 
     return (
-        <div>
+        <div className='component'>
             {!showNewComponent && (
+                <div className='heading'>
+                <h2 className="text" >Employee Work Experience Details</h2>
                 <div className='wadd-button'>
-                    <button onClick={() => setShowNewComponent(true)}>Add Details</button>
+                    <button className="text"  onClick={() => setShowNewComponent(true)}>+ Add</button>
                 </div>
+            </div>
+                
             )}
             {!showNewComponent && (
                 <table>
@@ -103,7 +107,7 @@ export default function WTable() {
             {showNewComponent && (
                 <div>
                     <div className='form-header'>
-                        <h2>{editWorkIndex === null ? 'Add WorkExperience Details' : 'Edit WorkExperience Details'}</h2>
+                        <h2 className="text">{editWorkIndex === null ? 'Add WorkExperience Details' : 'Edit WorkExperience Details'}</h2>
                     </div>
                     <div className='form-detail'>
                         <form onSubmit={handleSubmit}>

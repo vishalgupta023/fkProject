@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 import './Education.css'
 import { RiAddFill } from 'react-icons/ri';
 import data from './Edata.json'
-
+import { useNavigate } from 'react-router-dom';
 import ETable from './ETable';
 
 // import Eform from './Eform'
 
 export default function Education() {
+    const navigate = useNavigate()
     const [show, setShow] = useState(false);
 
 
@@ -69,28 +70,18 @@ export default function Education() {
 
 
     return (
-        <div className='eparent'>
+        <div>
             <div className='ebaby-left'>
                 {/* <Sidebar /> */}
             </div>
             <div className='ebaby-right'>
 
                 {!showNewComponent && (<>
-                    {/* <div> */}
-                    <div>
-                        <h2>Employee Education Details
-
-                        </h2>
-                        {/* <button variant="primary" onClick={handleClick}><RiAddFill style={{ paddingRight: "0.3rem" }} />
-                            Add
-                        </button> */}
-                    </div>
-                    {/* </div> */}
-
                     <ETable />
                 </>
                 )}
             </div>
+            <button onClick={() => navigate(-1)} className="back-button">Back</button> 
         </div>
     )
 }

@@ -1,5 +1,5 @@
 .nav{
-    background-color: #6749C6;
+    background-color: #ffffff;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -20,17 +20,20 @@
 
 .btn {
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     background-color: inherit;
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 30px 30px;
+    font-size: 50px;
     cursor: pointer;
     display: inline-block;
+    font-family: "Raleway";
   }
 
   .btn:hover {background: #838EED;}
 .default {color: black;}
 
-
-
-
+.a{
+    font-family: "Raleway";
+    font-size: 10px;
+    color : black;
+}
